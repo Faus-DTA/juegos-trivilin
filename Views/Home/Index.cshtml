@@ -1,0 +1,44 @@
+﻿@model FORM.Models.Jugador
+
+<link rel="stylesheet" href="~/css/site.css" />
+
+<h2>Registro GameJam</h2>
+
+<form asp-controller="GameJam" asp-action="Index" method="post">
+
+<div>
+<label>Nombre del jugador</label>
+<input type="text" name="Nombre" required>
+</div>
+
+<br>
+
+<div>
+<label>Fecha de nacimiento</label>
+<input type="date" name="FechaNacimiento" required>
+</div>
+
+<br>
+
+<div>
+<label>Hobbies</label>
+<input type="text" name="Hobbies">
+</div>
+
+<br>
+
+<div>
+<label>Pago de matrícula</label>
+<input type="checkbox" name="PagoMatricula" value="true">
+</div>
+
+<br>
+
+<button type="submit">Registrar</button>
+
+</form>
+
+@if(ViewBag.Mensaje != null)
+{
+    <h3>@ViewBag.Mensaje</h3>
+}
